@@ -1,0 +1,183 @@
+@import "./node_modules/bootstrap/scss/_functions";
+@import "./node_modules/bootstrap/scss/_variables";
+$font-family-sans-serif: "Segoe Script", "Arial", "Verdana" !important;
+$font-family-base: "Segoe Script", "Arial", "Verdana" !important;
+$font-family-monospace: "Courier New" !important;
+
+//Colors
+$rosa-clar: #e8cebf;
+$rosa-suau: #fbead5;
+$rosa-suauplus: #fcf4f0;
+$verd-fosc: #266150;
+$taronja: #ff9900;
+
+$custom-theme-colors: (
+    "rosa-clar": #e8cebf,
+    "verd-fosc": #266150,
+    "rosa-suauplus": #fcf4f0,
+    "rosa-suau": #fbead5,
+    "white": white,
+    "grey": grey,
+    "taronja": #ff9900
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//botons principals
+
+.btn-taronja:hover {
+    background-color: white !important;
+    color: $taronja !important;
+}
+
+.btn-verd-fosc:hover {
+    background-color: white !important;
+    color: $verd-fosc !important;
+}
+
+//navbar
+$navbar-light-toggler-border-color: $taronja !important;
+$navbar-toggler-padding-x: .5rem !important;
+
+.navbar-brand{
+    transition: 1s;
+}
+
+.navbar-brand:hover {
+    font-size: 30px !important;
+    transition: 1s;
+}
+
+.navbar-toggler{
+    &:focus{
+    box-shadow: none !important;
+}
+
+    &:hover, :visited{
+    box-shadow: 0 0 8px $taronja !important;
+}
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 153, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler-icon:active{
+    box-shadow: none !important;
+}
+
+.nav-link {
+
+    color: $verd-fosc !important;
+
+    &:hover {
+        color: $taronja !important;
+    }
+}
+
+//efecte del header
+header{
+    transition: 1s;
+}
+
+header:hover{
+    background-color: $taronja !important;
+    color: $white !important;
+}
+
+//cards
+
+.card{
+    border: none !important;
+    &:hover{
+        padding: 4px;
+    }
+}
+
+//modal amb lletra més formal
+.modal{
+    font-family: "Arial" !important;
+}
+
+//CHECKOUT:
+
+//Canviem el color del focus dels inputs
+$input-focus-border-color: $verd-fosc;
+$input-focus-box-shadow: 0 0 5px $verd-fosc;
+
+//donem dimensions al container invisible
+.input-container {
+    height: 5rem;
+    width: 5rem;
+}
+
+//Arreglem el botó radio. Fem invisible el radio input real + omplim el container
+.radio-button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.icon{
+    color: black;
+    width: 3rem;
+    height: 3rem;
+}
+
+.radio-tile-label {
+text-align: center;
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: black;
+}
+
+//Efectes de botó
+.radio-button:hover+.radio-tile{
+    background-color: white;
+    border: 2px solid $verd-fosc;
+
+    .icon {
+    color: $verd-fosc;
+    background-color: white;
+    }
+
+    .radio-tile-label {
+        color: $verd-fosc;
+        background-color: white;
+    }
+
+}
+
+.radio-button:checked+.radio-tile {
+    background-color: $verd-fosc;
+    border: 2px solid $verd-fosc;
+    color: white;
+    transform: scale(1.1, 1.1);
+    
+.icon{
+    color: white;
+    background-color: $verd-fosc;
+    }
+    
+.radio-tile-label {
+    color: white;
+    background-color: $verd-fosc
+    }
+}
+
+
+@import "./node_modules/bootstrap/scss/bootstrap";
