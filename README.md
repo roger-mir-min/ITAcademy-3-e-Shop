@@ -2,7 +2,7 @@
 A simple page for an e-commerce.
 
 ## Background
-Result of Sprint 4 at IT Academy.
+Result of Sprint 3 at IT Academy.
 
 ## Installing
 1. Clone the repository https://github.com/roger-mir-min/ITAcademy-3-e-Shop.git
